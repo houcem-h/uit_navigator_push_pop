@@ -12,6 +12,27 @@ class MyFirstScreen extends StatelessWidget {
         title: Text(title),
         backgroundColor: Colors.teal,
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              "Screen 1",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 40,
+                color: Colors.teal
+              ),
+            ),
+            RaisedButton(
+              child: Text("Next Screen"),
+              color: Colors.teal,
+              textColor: Colors.white,
+              onPressed: null,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
