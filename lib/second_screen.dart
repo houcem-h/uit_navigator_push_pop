@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyFirstScreen extends StatelessWidget {
-  const MyFirstScreen({Key? key, required this.title}) : super(key: key);
+class MySecondScreen extends StatelessWidget {
+  const MySecondScreen({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -15,9 +15,9 @@ class MyFirstScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              "Screen 1",
+          children: <Widget>[
+            const Text(
+              "Screen 2",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 40,
@@ -25,10 +25,12 @@ class MyFirstScreen extends StatelessWidget {
               ),
             ),
             RaisedButton(
-              child: Text("Next Screen"),
+              child: const Text("Previous Screen"),
               color: Colors.teal,
               textColor: Colors.white,
-              onPressed: null,
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ],
         ),
